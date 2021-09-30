@@ -1,0 +1,4 @@
+@use "~@angular/material" as mat;
+
+$my-primary: mat.define-palette(mat.$indigo-palette, 500);
+$primary-color: mat.get-color-from-palette($my-primary, 500);

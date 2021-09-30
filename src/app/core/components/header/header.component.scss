@@ -1,19 +1,22 @@
-@use 'sass:map';
-@use '~@angular/material' as mat;
+@import './../../../../assets/scss/colors';
 
 :host {
     nav {
+        background-color: $primary-color;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
         border-bottom: 4px solid #CFE6F1;
         color: white;
         display: flex;
         flex-wrap: nowrap;
-        padding: .5rem 0;
 
-        form {
-            align-items: center;
-            display: flex;
-            margin-left: auto;
+        button {
+            margin: .5rem 0 .5rem .5rem;
         }
+    }
+
+    img {
+        height: 3.5rem;
+        object-fit: cover;
+        width: 3.5rem;
     }
 }

@@ -107,7 +107,3 @@ $my-theme: mat.define-light-theme(
 );
 
 @include mat.all-component-themes($my-theme);
-
-.primary-bg {
-    background-color: mat.get-color-from-palette($my-primary, 500);
-}

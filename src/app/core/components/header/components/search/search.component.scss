@@ -1,0 +1,50 @@
+@import './../../../../../../assets/scss/colors';
+@import './../../../../../../assets/scss/variables';
+
+:host {
+    display: flex;
+
+    form {
+        align-items: center;
+        display: flex;
+        margin-left: auto;
+        position: relative;
+
+        input {
+            border: 0;
+            height: 100%;
+            opacity: .1;
+            outline: none;
+            transition: width $transition-time $transition-type,
+                        opacity $transition-time $transition-type;
+            width: 3.5rem;
+
+            &::placeholder {
+                color: transparent;
+                transition: color $transition-time $transition-type;
+            }
+
+            &:focus {
+                padding: 1rem 3rem 1rem 1rem;
+                opacity: 1;
+                width: 16vw;
+
+                &::placeholder {
+                    color: black;
+                }
+
+                &+ mat-icon {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        mat-icon {
+            pointer-events: none;
+            position: absolute;
+            right: 1rem;
+            transition: color $transition-time $transition-type;
+        }
+    }
+}
+

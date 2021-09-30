@@ -1,23 +1,21 @@
 <header>
-    <nav class="primary-bg">
+    <nav>
         <button mat-button>Início</button>
         <button mat-button>Membros</button>
         <button mat-button>Chatbox</button>
 
         <div class="mx-auto">
-            <button mat-icon-button>
+            <button mat-icon-button title="Scroll fim da página">
                 <mat-icon>expand_more</mat-icon>
             </button>
 
-            <button mat-icon-button>
+            <button mat-icon-button title="Scroll topo da página">
                 <mat-icon>expand_less</mat-icon>
             </button>
         </div>
 
-        <form [formGroup]="form" (ngSubmit)="submit()">
-            <input placeholder="Acampamento...">
-            <mat-icon matSuffix>search</mat-icon>
-        </form>
+        <app-search></app-search>
+
+        <img src="https://2img.net/u/2914/23/82/20/avatars/677-77.jpg" alt="Mumvock">
     </nav>
 </header>
-
