@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '~@angular/material' as mat;
+
+:host {
+    nav {
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 4px solid #CFE6F1;
+        color: white;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: .5rem 0;
+
+        form {
+            align-items: center;
+            display: flex;
+            margin-left: auto;
+        }
+    }
+}

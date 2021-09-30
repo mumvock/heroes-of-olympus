@@ -1,0 +1,113 @@
+@use "~@angular/material" as mat;
+@include mat.core();
+
+$dark-primary-text: rgba(black, 0.87);
+$dark-secondary-text: rgba(black, 0.54);
+$dark-disabled-text: rgba(black, 0.38);
+$dark-dividers: rgba(black, 0.12);
+$dark-focused: rgba(black, 0.12);
+$light-primary-text: white;
+$light-secondary-text: rgba(white, 0.7);
+$light-disabled-text: rgba(white, 0.5);
+$light-dividers: rgba(white, 0.12);
+$light-focused: rgba(white, 0.12);
+
+// Para gerar outras cores:
+// https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+$project-primary: (
+    50: #e5e7ee,
+    100: #bdc3d6,
+    200: #949dba,
+    300: #6c789e,
+    400: #4f5c8b,
+    500: #31427a,
+    600: #2b3b72,
+    700: #233367,
+    800: #1c2a5b,
+    900: #121a44,
+    A100: #8c9eff,
+    A200: #536dfe,
+    A400: #3d5afe,
+    A700: #304ffe,
+    contrast: (
+        50: $dark-primary-text,
+        100: $dark-primary-text,
+        200: $dark-primary-text,
+        300: $light-primary-text,
+        400: $light-primary-text,
+        500: $light-primary-text,
+        600: $light-primary-text,
+        700: $light-primary-text,
+        800: $light-primary-text,
+        900: $light-primary-text,
+        A100: $dark-primary-text,
+        A200: $light-primary-text,
+        A400: $light-primary-text,
+        A700: $light-primary-text,
+    )
+);
+
+$project-secondary: (
+    50: #efe3ec,
+    100: #d7b8d0,
+    200: #bd8ab2,
+    300: #a25f94,
+    400: #8f4180,
+    500: #7c286c,
+    600: #712367,
+    700: #631d5f,
+    800: #551956,
+    900: #3c1244,
+    A100: #515151,
+    A200: #494949,
+    A400: #292929,
+    A700: #202020,
+    contrast: (
+        50: $dark-primary-text,
+        100: $dark-primary-text,
+        200: $dark-primary-text,
+        300: $light-primary-text,
+        400: $light-primary-text,
+        500: $light-primary-text,
+        600: $light-primary-text,
+        700: $light-primary-text,
+        800: $light-primary-text,
+        900: $light-primary-text,
+        A100: $dark-primary-text,
+        A200: $light-primary-text,
+        A400: $light-primary-text,
+        A700: $light-primary-text,
+    )
+);
+
+$project-typografy: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif";
+
+// $my-primary: mat.define-palette($project-primary, 900);
+// $my-accent: mat.define-palette($project-secondary, 700, 800, 900);
+
+$my-primary: mat.define-palette(mat.$indigo-palette, 500);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$typography: mat.define-typography-config(
+    $font-family: $project-typografy,
+);
+
+$my-theme: mat.define-light-theme(
+    (
+        color: (
+            primary: $my-primary,
+            accent: $my-accent,
+            warn: $my-warn,
+        ),
+        typography: $typography,
+    )
+);
+
+@include mat.all-component-themes($my-theme);
+
+.primary-bg {
+    background-color: mat.get-color-from-palette($my-primary, 500);
+}

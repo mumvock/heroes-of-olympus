@@ -1,0 +1,23 @@
+<header>
+    <nav class="primary-bg">
+        <button mat-button>Início</button>
+        <button mat-button>Membros</button>
+        <button mat-button>Chatbox</button>
+
+        <div class="mx-auto">
+            <button mat-icon-button>
+                <mat-icon>expand_more</mat-icon>
+            </button>
+
+            <button mat-icon-button>
+                <mat-icon>expand_less</mat-icon>
+            </button>
+        </div>
+
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <input placeholder="Acampamento...">
+            <mat-icon matSuffix>search</mat-icon>
+        </form>
+    </nav>
+</header>
+
