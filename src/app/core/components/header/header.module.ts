@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 import { SearchModule } from './components/search/search.module';
 
@@ -15,6 +16,7 @@ import { HeaderComponent } from './header.component';
   imports: [
     CommonModule,
     SearchModule,
+    RouterModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,

@@ -1,20 +1,20 @@
 <header>
     <nav>
-        <button mat-button>Início</button>
-        <button mat-button>Membros</button>
-        <button mat-button>Chatbox</button>
+        <img src="./../../../../assets/images/logo/heroes-of-olympus-small.png" alt="Heroes of Olympus - Logo">
 
-        <div class="mx-auto">
-            <button mat-icon-button title="Scroll fim da página">
-                <mat-icon>expand_more</mat-icon>
-            </button>
+        <app-search class="me-auto"></app-search>
 
-            <button mat-icon-button title="Scroll topo da página">
-                <mat-icon>expand_less</mat-icon>
-            </button>
-        </div>
+        <a mat-button [routerLink]="['']" routerLinkActive="active">Início</a>
+        <a mat-button>Membros</a>
+        <a mat-button>Chatbox</a>
 
-        <app-search></app-search>
+        <button mat-icon-button title="Scroll fim da página" class="ms-auto">
+            <mat-icon>expand_more</mat-icon>
+        </button>
+
+        <button mat-icon-button title="Scroll topo da página">
+            <mat-icon>expand_less</mat-icon>
+        </button>
 
         <img src="https://2img.net/u/2914/23/82/20/avatars/677-77.jpg" alt="Mumvock">
     </nav>

@@ -7,17 +7,17 @@
     form {
         align-items: center;
         display: flex;
-        margin-left: auto;
         position: relative;
 
         input {
             border: 0;
-            height: 100%;
+            border-radius: 2.5rem;
+            height: 2.5rem;
             opacity: .1;
             outline: none;
             transition: width $transition-time $transition-type,
                         opacity $transition-time $transition-type;
-            width: 3.5rem;
+            width: 2.5rem;
 
             &::placeholder {
                 color: transparent;
@@ -42,7 +42,7 @@
         mat-icon {
             pointer-events: none;
             position: absolute;
-            right: 1rem;
+            right: .5rem;
             transition: color $transition-time $transition-type;
         }
     }
