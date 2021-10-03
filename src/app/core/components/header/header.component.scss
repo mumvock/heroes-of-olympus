@@ -1,10 +1,12 @@
 @import './../../../../assets/scss/colors';
 
 :host {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
     nav {
-        background-color: $primary-color;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-        border-bottom: 4px solid #CFE6F1;
         color: white;
         display: flex;
         flex-wrap: nowrap;
@@ -16,14 +18,28 @@
             &:hover {
                 color: unset;
             }
+
+            &:not(nav a) {
+                background-color: #ffffff1c;
+            }
+        }
+
+        div a {
+            margin: .5rem;
+            transform: scale(1.2);
+            padding: 0 2rem;
+            width: unset;
+            border-radius: 5rem;
         }
 
         img {
             border-radius: 50%;
+            cursor: pointer;
             height: 2.5rem;
             width: 2.5rem;
             margin-top: .5rem;
             margin-bottom: .5rem;
+            user-select: none;
 
             &:first-of-type {
                 margin-right: .5rem;

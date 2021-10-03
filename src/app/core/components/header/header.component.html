@@ -1,21 +1,33 @@
 <header>
     <nav>
-        <img src="./../../../../assets/images/logo/heroes-of-olympus-small.png" alt="Heroes of Olympus - Logo">
+        <img [src]="assetsUrl + 'logo/heroes-of-olympus-small.png'" alt="Heroes of Olympus - Logo">
 
         <app-search class="me-auto"></app-search>
 
-        <a mat-button [routerLink]="['']" routerLinkActive="active">Início</a>
-        <a mat-button>Membros</a>
-        <a mat-button>Chatbox</a>
+        <div>
+            <a mat-icon-button [routerLink]="['']" routerLinkActive="active" matTooltip="Início">
+                <mat-icon>home</mat-icon>
+            </a>
+            <a mat-icon-button matTooltip="Membros">
+                <mat-icon>person_search</mat-icon>
+            </a>
+            <a mat-icon-button matTooltip="Chat">
+                <mat-icon>chat</mat-icon>
+            </a>
+        </div>
 
-        <button mat-icon-button title="Scroll fim da página" class="ms-auto">
+        <button mat-icon-button matTooltip="Scroll fim da página" class="ms-auto">
             <mat-icon>expand_more</mat-icon>
         </button>
 
-        <button mat-icon-button title="Scroll topo da página">
+        <button mat-icon-button matTooltip="Scroll topo da página">
             <mat-icon>expand_less</mat-icon>
         </button>
 
-        <img src="https://2img.net/u/2914/23/82/20/avatars/677-77.jpg" alt="Mumvock">
+        <button mat-icon-button matTooltip="Notificações">
+            <mat-icon>notifications</mat-icon>
+        </button>
+
+        <img src="https://2img.net/u/2914/23/82/20/avatars/677-77.jpg" alt="Mumvock" matTooltip="Conta">
     </nav>
 </header>

@@ -1,7 +1,37 @@
-:root, html, body {
-  font-size: 16px;
+@import './shared/blur-background';
+
+:root,
+html,
+body {
+    font-size: 16px;
 }
 
-html, body {
-  height: 100%;
+html {
+    background-color: #17181b;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: transparent;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: url('./../../assets/images/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        @include blur-background;
+    }
 }

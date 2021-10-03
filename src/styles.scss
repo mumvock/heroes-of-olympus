@@ -1,9 +1,5 @@
-/* Base */
-@import './assets/fonts/fonts';
-@import './assets/scss/base';
-
 /* Angular Material */
-@import './assets/scss/angular-material-theming';
+@import './assets/scss/theming';
 
 /* Bootstrap */
 @import '~bootstrap/scss/bootstrap-reboot';
@@ -13,3 +9,7 @@
 
 /* Components */
 @import './assets/scss/components/components';
+
+/* Base */
+@import './assets/fonts/fonts';
+@import './assets/scss/base';

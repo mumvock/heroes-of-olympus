@@ -1,5 +1,23 @@
 @import './../colors';
 
-a.active {
-    background-color: $accent-color;
+header nav a {
+    position: absolute;
+
+    &.active {
+        & span,
+        &:hover span {
+            color: $primary-color;
+        }
+
+        &::after {
+            background-color: $primary-color;
+            content: "";
+            display: block;
+            height: 3px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            border-radius: 5rem;
+        }
+    }
 }
