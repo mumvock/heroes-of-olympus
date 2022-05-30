@@ -19,7 +19,7 @@
         }
 
         ::ng-deep mat-step-header {
-            border-radius: 5rem !important;
+            border-radius: 5rem;
         }
 
         > section {
@@ -27,10 +27,38 @@
             height: 100vh;
             display: grid;
             color: white;
-            text-align: center;
             z-index: 1;
             position: relative;
-            align-items: center;
+            grid-template-columns: 18rem 1fr;
+            grid-template-rows: repeat(5, 1fr);
+
+            nav.sub-forums {
+                list-style: none;
+                margin: 0;
+                padding: 0 1rem 0 0;
+                display: grid;
+                grid-column: 2;
+                grid-row: 2 / 5;
+                grid-template-columns: 1fr 1fr;
+                border-radius: 5rem;
+                overflow: hidden;
+                position: relative;
+
+                a {
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    white-space: unset;
+                    line-height: normal;
+                    border-radius: 5rem;
+
+                    &.expand-sub-forum {
+                        grid-row: auto / span 2;
+                    }
+                }
+            }
 
             div.forum-background {
                 display: block;
