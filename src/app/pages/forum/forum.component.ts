@@ -26,10 +26,18 @@ export class ForumComponent extends BaseComponent implements OnInit {
         {
             name: 'Domínio dos Deuses',
             backgroundImage: 'gods.webp',
-            subForuns: [
+            subForums: [
                 {
                     name: 'Sala dos Doze Tronos',
                     description: 'A principal sala de reuniões do Olimpo, onde ocorre o Conselho Olimpiano.',
+                },
+                {
+                    name: 'Sala dos Deuses',
+                    description: 'Fique sempre atentos Olimpianos e Menores. Esta sala contém informações, questionamentos, atualizações e regras importantes para todos os Deuses.',
+                },
+                {
+                    name: 'Sala dos Deuses',
+                    description: 'Fique sempre atentos Olimpianos e Menores. Esta sala contém informações, questionamentos, atualizações e regras importantes para todos os Deuses.',
                 },
                 {
                     name: 'Sala dos Deuses',

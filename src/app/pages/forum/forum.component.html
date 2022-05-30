@@ -5,16 +5,37 @@
         [selectedIndex]="selectedIndex || 0">
 
         <mat-step
-            *ngFor="let forum of forums; let i = index"
+            *ngFor="let forum of forums"
             [stepControl]="form"
             [label]="forum.name">
         </mat-step>
     </mat-stepper>
 
     <section
-        *ngFor="let forum of forums; let i = index;"
-        [id]="(i + 1)"
+        *ngFor="let forum of forums; let forumIndex = index;"
+        [id]="(forumIndex + 1)"
         scroll>
+
+        <nav class="sub-forums">
+            <a
+                mat-button
+                routerLink=""
+                *ngFor="let subForum of forum.subForums; let subForumIndex = index"
+                [ngClass]="{
+                    'expand-sub-forum': forum.subForums
+                        && (forum.subForums.length % 2 !== 0)
+                        && subForumIndex === (forum.subForums.length - 2)
+                }">
+                <h1>{{subForum.name}}</h1>
+                {{subForum.description}}
+            </a>
+
+            <div
+                *ngIf="forum.backgroundImage"
+                [style.background-image]="'url('+ assetsUrl + 'forums/' + forum.backgroundImage + ')'"
+                class="forum-background">
+            </div>
+        </nav>
 
         <div
             *ngIf="forum.backgroundImage"
